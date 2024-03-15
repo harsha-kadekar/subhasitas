@@ -13,6 +13,15 @@ A simple service that can provide random subhasitas (maxims). Sanskrit: सु�
     - gcc (on Linux)
 - Docker Engine
 
+Instructions to install the dependencies can be found in the links below. They have also been reproduced in this doc
+for ease of access and potential deviations from official docs (example: winget not mentioned in Rust docs).
+
+[Install Rust](https://www.rust-lang.org/tools/install)
+
+[Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+[Moving WSL2 to alternate drive](https://superuser.com/questions/1550622/move-wsl2-file-system-to-another-drive)
+
 **Windows instructions**
 
 ```
@@ -37,10 +46,7 @@ rustc --version
     wsl --install -d Ubuntu-22.04
     ```
 
-    - To install on an alternate drive:
-
-    _(Instructions from https://superuser.com/questions/1550622/move-wsl2-file-system-to-another-drive)_
-
+    - To move it to an alternate drive:
     ```
     wsl --shutdown
 
@@ -68,19 +74,18 @@ rustc --version
     sudo apt install gcc -y
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
     # Restart terminal after that and verify this works:
     rustc --version
     ```
 
 ## Build
-
 ```
 # Change dir into project root
 cargo build
 ```
 
 ## Unit Tests
-
 ```
 # Run all tests
 cargo test
@@ -90,7 +95,6 @@ cargo test hello_test
 ```
 
 ## Run
-
 ```
-./target/debug/subhasitas
+cargo run
 ```
