@@ -2,6 +2,10 @@
 
 A simple service that can provide random subhasitas (maxims). Sanskrit: सुभाषित, subhāṣita.
 
+[![codecov](https://codecov.io/gh/harsha-kadekar/subhasitas/graph/badge.svg?token=UFZ5YSNFJU)](https://codecov.io/gh/harsha-kadekar/subhasitas)
+[![CI](https://github.com/harsha-kadekar/subhasitas/actions/workflows/rust.yml/badge.svg)](https://github.com/harsha-kadekar/subhasitas/actions/workflows/rust.yml)
+
+
 # Getting Started
 
 ## Environment setup
@@ -92,6 +96,22 @@ cargo test
 
 # Run a single test
 cargo test hello_test
+```
+
+## Code Coverage
+For understanding the code coverage, we are using [cargo-llvm-cov](https://github.com/taiki-e/cargo-llvm-cov). We are targetting 60% line coverage, 40% region coverage and 60% function coverage. We will increase this threshold as the product development proceeds. We are uploading the code coverage data to the [CodeCov](https://app.codecov.io/gh/harsha-kadekar/subhasitas) 
+
+```
+cargo +stable install cargo-llvm-cov --locked
+
+# Displays the report in the stdout
+cargo llvm-cov --workspace --all-features  --fail-under-lines 50 --fail-under-functions 50 --fail-under-regions 50  -- tests
+
+# generates the html coverage report in folder target/llvm-cov/html/index.html
+cargo llvm-cov --html
+
+# generates the output file which will be uploaded to CodeCov during Github Actions
+cargo llvm-cov --lcov --output-path lcov.info
 ```
 
 ## Run
