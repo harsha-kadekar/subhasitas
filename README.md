@@ -99,11 +99,7 @@ cargo test hello_test
 ```
 
 ## Code Coverage
-<<<<<<< HEAD
 For understanding the code coverage, we are using [cargo-llvm-cov](https://github.com/taiki-e/cargo-llvm-cov). We are targetting 50% line coverage, 50% region coverage and 50% function coverage. We will increase this threshold as the product development proceeds. We are uploading the code coverage data to the [CodeCov](https://app.codecov.io/gh/harsha-kadekar/subhasitas)
-=======
-For understanding the code coverage, we are using [cargo-llvm-cov](https://github.com/taiki-e/cargo-llvm-cov). We are targetting 60% line coverage, 40% region coverage and 60% function coverage. We will increase this threshold as the product development proceeds. We are uploading the code coverage data to the [CodeCov](https://app.codecov.io/gh/harsha-kadekar/subhasitas) 
->>>>>>> ceb518a (feat: #2 Integrate project repo to CodeCov to understand the code coverage as part of unit tests)
 
 ```
 cargo +stable install cargo-llvm-cov --locked
